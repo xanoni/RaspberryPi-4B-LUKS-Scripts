@@ -1,2 +1,2 @@
-This needs to be cleaned up and summarized further!
+- clean up and summarize further
 
