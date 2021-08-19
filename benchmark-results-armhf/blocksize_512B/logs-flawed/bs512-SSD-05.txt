@@ -1,0 +1,120 @@
+
+Please make sure your working dir is on the drive to be benchmarked!
+
+
+> cryptsetup benchmark 1/2:
+
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha12,aes-adiantum        256b       106.6 MiB/s       112.0 MiB/s
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha20,aes-adiantum        256b        97.7 MiB/s        98.1 MiB/s
+# Tests are approximate using memory only (no storage IO).
+# Algorithm |       Key |      Encryption |      Decryption
+    aes-xts        256b        83.3 MiB/s        73.0 MiB/s
+
+> cryptsetup benchmark 2/2:
+
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha12,aes-adiantum        256b       112.0 MiB/s       112.2 MiB/s
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha20,aes-adiantum        256b        98.0 MiB/s        98.4 MiB/s
+# Tests are approximate using memory only (no storage IO).
+# Algorithm |       Key |      Encryption |      Decryption
+    aes-xts        256b        83.4 MiB/s        73.0 MiB/s
+
+> cryptsetup benchmark done!
+
+
+
+> dd benchmark 1/1 (bs=1M):
+
+write test:
+5120+0 records in
+5120+0 records out
+5368709120 bytes (5.4 GB, 5.0 GiB) copied, 26.5925 s, 202 MB/s
+
+read test:
+5120+0 records in
+5120+0 records out
+5368709120 bytes (5.4 GB, 5.0 GiB) copied, 22.5322 s, 238 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/2 (bs=64k):
+
+write test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 14.8246 s, 217 MB/s
+
+read test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 12.5913 s, 256 MB/s
+
+> dd benchmark 2/2 (bs=64k):
+
+write test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 14.5005 s, 222 MB/s
+
+read test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 12.3664 s, 260 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/2 (bs=4k):
+
+write test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 11.7254 s, 183 MB/s
+
+read test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 8.95989 s, 240 MB/s
+
+> dd benchmark 2/2 (bs=4k):
+
+write test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 11.5707 s, 186 MB/s
+
+read test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 9.00742 s, 238 MB/s
+
+> dd benchmark done!
+
+
+
+> hdparm benchmark 1/2 (/dev/sda):
+
+
+/dev/sda:
+ Timing cached reads:   1616 MB in  2.00 seconds = 808.47 MB/sec
+ Timing buffered disk reads: 764 MB in  3.14 seconds = 243.07 MB/sec
+
+> hdparm benchmark 2/2 (/dev/sda):
+
+
+/dev/sda:
+ Timing cached reads:   1550 MB in  2.00 seconds = 775.16 MB/sec
+ Timing buffered disk reads: 764 MB in  3.11 seconds = 245.84 MB/sec
+
+> hdparm benchmark done!
+

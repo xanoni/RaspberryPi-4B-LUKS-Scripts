@@ -1,0 +1,90 @@
+> dd benchmark 1/1 (bs=1M):
+
+write test:
+5120+0 records in
+5120+0 records out
+5368709120 bytes (5.4 GB, 5.0 GiB) copied, 47.4326 s, 113 MB/s
+
+read test:
+5120+0 records in
+5120+0 records out
+5368709120 bytes (5.4 GB, 5.0 GiB) copied, 71.5079 s, 75.1 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/2 (bs=64k):
+
+write test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 27.6427 s, 117 MB/s
+
+read test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 42.3093 s, 76.1 MB/s
+
+> dd benchmark 2/2 (bs=64k):
+
+write test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 27.8296 s, 116 MB/s
+
+read test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 42.5868 s, 75.6 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/2 (bs=4k):
+
+write test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 19.0718 s, 113 MB/s
+
+read test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 28.3366 s, 75.8 MB/s
+
+> dd benchmark 2/2 (bs=4k):
+
+write test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 19.0008 s, 113 MB/s
+
+read test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 29.2274 s, 73.5 MB/s
+
+> dd benchmark done!
+
+
+
+> hdparm benchmark 1/2 (/dev/mapper/cryptsdb3):
+
+
+/dev/mapper/cryptsdb3:
+ Timing cached reads:    HDIO_DRIVE_CMD(identify) failed: Inappropriate ioctl for device
+1508 MB in  2.00 seconds = 753.97 MB/sec
+ Timing buffered disk reads: 190 MB in  3.49 seconds =  54.38 MB/sec
+
+> hdparm benchmark 2/2 (/dev/mapper/cryptsdb3):
+
+
+/dev/mapper/cryptsdb3:
+ Timing cached reads:    HDIO_DRIVE_CMD(identify) failed: Inappropriate ioctl for device
+1480 MB in  2.00 seconds = 740.49 MB/sec
+ Timing buffered disk reads: 190 MB in  3.38 seconds =  56.16 MB/sec
+
+> hdparm benchmark done!
+

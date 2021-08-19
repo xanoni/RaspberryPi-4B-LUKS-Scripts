@@ -1,0 +1,122 @@
+
+Please make sure your working dir is on the drive to be benchmarked!
+
+
+> cryptsetup benchmark 1/2:
+
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha12,aes-adiantum        256b       110.8 MiB/s       110.9 MiB/s
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha20,aes-adiantum        256b        97.1 MiB/s        97.7 MiB/s
+# Tests are approximate using memory only (no storage IO).
+# Algorithm |       Key |      Encryption |      Decryption
+    aes-xts        256b        83.1 MiB/s        72.9 MiB/s
+
+> cryptsetup benchmark 2/2:
+
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha12,aes-adiantum        256b       110.9 MiB/s       112.2 MiB/s
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha20,aes-adiantum        256b        97.4 MiB/s        97.8 MiB/s
+# Tests are approximate using memory only (no storage IO).
+# Algorithm |       Key |      Encryption |      Decryption
+    aes-xts        256b        83.0 MiB/s        72.8 MiB/s
+
+> cryptsetup benchmark done!
+
+
+
+> dd benchmark 1/1 (bs=1M):
+
+write test:
+5120+0 records in
+5120+0 records out
+5368709120 bytes (5.4 GB, 5.0 GiB) copied, 64.3022 s, 83.5 MB/s
+
+read test:
+5120+0 records in
+5120+0 records out
+5368709120 bytes (5.4 GB, 5.0 GiB) copied, 96.3261 s, 55.7 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/2 (bs=64k):
+
+write test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 37.3168 s, 86.3 MB/s
+
+read test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 57.2074 s, 56.3 MB/s
+
+> dd benchmark 2/2 (bs=64k):
+
+write test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 37.0852 s, 86.9 MB/s
+
+read test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 57.9729 s, 55.6 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/2 (bs=4k):
+
+write test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 25.7067 s, 83.5 MB/s
+
+read test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 39.3705 s, 54.5 MB/s
+
+> dd benchmark 2/2 (bs=4k):
+
+write test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 25.5755 s, 84.0 MB/s
+
+read test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 38.8953 s, 55.2 MB/s
+
+> dd benchmark done!
+
+
+
+> hdparm benchmark 1/2 (/dev/mapper/cryptsdb3):
+
+
+/dev/mapper/cryptsdb3:
+ Timing cached reads:    HDIO_DRIVE_CMD(identify) failed: Inappropriate ioctl for device
+1558 MB in  2.00 seconds = 778.83 MB/sec
+ Timing buffered disk reads: 190 MB in  3.04 seconds =  62.44 MB/sec
+
+> hdparm benchmark 2/2 (/dev/mapper/cryptsdb3):
+
+
+/dev/mapper/cryptsdb3:
+ Timing cached reads:    HDIO_DRIVE_CMD(identify) failed: Inappropriate ioctl for device
+1534 MB in  2.00 seconds = 767.62 MB/sec
+ Timing buffered disk reads: 190 MB in  3.10 seconds =  61.32 MB/sec
+
+> hdparm benchmark done!
+

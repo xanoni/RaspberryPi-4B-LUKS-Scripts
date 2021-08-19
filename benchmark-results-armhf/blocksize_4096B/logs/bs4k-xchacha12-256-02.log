@@ -1,0 +1,150 @@
+
+Please make sure your working dir is on the drive to be benchmarked!
+
+
+> cryptsetup benchmark 1/1:
+
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha12,aes-adiantum        256b       106.1 MiB/s       110.1 MiB/s
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha20,aes-adiantum        256b        96.8 MiB/s        97.3 MiB/s
+# Tests are approximate using memory only (no storage IO).
+# Algorithm |       Key |      Encryption |      Decryption
+    aes-xts        256b        83.0 MiB/s        72.8 MiB/s
+
+> cryptsetup benchmark done!
+
+
+
+> hdparm benchmark 1/2 (/dev/mapper/croot):
+
+
+/dev/mapper/croot:
+ Timing O_DIRECT cached reads:    HDIO_DRIVE_CMD(identify) failed: Inappropriate ioctl for device
+230 MB in  2.01 seconds = 114.40 MB/sec
+ Timing O_DIRECT disk reads: 360 MB in  3.02 seconds = 119.39 MB/sec
+
+> hdparm benchmark 2/2 (/dev/mapper/croot):
+
+
+/dev/mapper/croot:
+ Timing O_DIRECT cached reads:    HDIO_DRIVE_CMD(identify) failed: Inappropriate ioctl for device
+230 MB in  2.01 seconds = 114.39 MB/sec
+ Timing O_DIRECT disk reads: 350 MB in  3.01 seconds = 116.33 MB/sec
+
+> hdparm benchmark done!
+
+
+> dd benchmark 1/1 (bs=512M):
+
+write test:
+2+0 records in
+2+0 records out
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 8.91533 s, 120 MB/s
+
+read test:
+2+0 records in
+2+0 records out
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 8.52677 s, 126 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/1 (bs=128M):
+
+write test:
+8+0 records in
+8+0 records out
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 8.83992 s, 121 MB/s
+
+read test:
+8+0 records in
+8+0 records out
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 7.67993 s, 140 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/1 (bs=64M):
+
+write test:
+16+0 records in
+16+0 records out
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 9.88789 s, 109 MB/s
+
+read test:
+16+0 records in
+16+0 records out
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 7.45059 s, 144 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/1 (bs=32M):
+
+write test:
+32+0 records in
+32+0 records out
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 10.7235 s, 100 MB/s
+
+read test:
+32+0 records in
+32+0 records out
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 7.1025 s, 151 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/1 (bs=1M):
+
+write test:
+256+0 records in
+256+0 records out
+268435456 bytes (268 MB, 256 MiB) copied, 7.38786 s, 36.3 MB/s
+
+read test:
+256+0 records in
+256+0 records out
+268435456 bytes (268 MB, 256 MiB) copied, 1.45727 s, 184 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/1 (bs=64k):
+
+write test:
+3276+0 records in
+3276+0 records out
+214695936 bytes (215 MB, 205 MiB) copied, 17.9986 s, 11.9 MB/s
+
+read test:
+3276+0 records in
+3276+0 records out
+214695936 bytes (215 MB, 205 MiB) copied, 1.11527 s, 193 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/1 (bs=4k):
+
+write test:
+2621+0 records in
+2621+0 records out
+10735616 bytes (11 MB, 10 MiB) copied, 8.77791 s, 1.2 MB/s
+
+read test:
+2621+0 records in
+2621+0 records out
+10735616 bytes (11 MB, 10 MiB) copied, 0.069777 s, 154 MB/s
+
+> dd benchmark done!
+
+

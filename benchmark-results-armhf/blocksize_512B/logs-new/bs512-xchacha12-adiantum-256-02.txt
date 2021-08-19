@@ -1,0 +1,43 @@
+> hdparm benchmark 1/2 (/dev/mapper/cryptssd):
+/dev/mapper/cryptssd:
+106 MB in  2.00 seconds =  52.92 MB/sec
+ Timing O_DIRECT disk reads: 160 MB in  3.01 seconds =  53.16 MB/sec
+> hdparm benchmark 2/2 (/dev/mapper/cryptssd):
+/dev/mapper/cryptssd:
+106 MB in  2.01 seconds =  52.70 MB/sec
+ Timing O_DIRECT disk reads: 162 MB in  3.02 seconds =  53.56 MB/sec
+> dd benchmark 1/1 (bs=512M):
+write test:
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 14.6596 s, 73.2 MB/s
+read test:
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 19.0974 s, 56.2 MB/s
+> dd benchmark 1/1 (bs=128M):
+write test:
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 15.0009 s, 71.6 MB/s
+read test:
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 18.7023 s, 57.4 MB/s
+> dd benchmark 1/1 (bs=64M):
+write test:
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 16.2533 s, 66.1 MB/s
+read test:
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 18.5778 s, 57.8 MB/s
+> dd benchmark 1/1 (bs=32M):
+write test:
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 17.6283 s, 60.9 MB/s
+read test:
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 18.5537 s, 57.9 MB/s
+> dd benchmark 1/1 (bs=1M):
+write test:
+268435456 bytes (268 MB, 256 MiB) copied, 13.8774 s, 19.3 MB/s
+read test:
+268435456 bytes (268 MB, 256 MiB) copied, 3.84186 s, 69.9 MB/s
+> dd benchmark 1/1 (bs=64k):
+write test:
+214695936 bytes (215 MB, 205 MiB) copied, 21.8921 s, 9.8 MB/s
+read test:
+214695936 bytes (215 MB, 205 MiB) copied, 2.91544 s, 73.6 MB/s
+> dd benchmark 1/1 (bs=4k):
+write test:
+10735616 bytes (11 MB, 10 MiB) copied, 8.98041 s, 1.2 MB/s
+read test:
+10735616 bytes (11 MB, 10 MiB) copied, 0.125814 s, 85.3 MB/s

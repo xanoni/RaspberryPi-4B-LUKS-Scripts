@@ -1,0 +1,90 @@
+> dd benchmark 1/1 (bs=1M):
+
+write test:
+5120+0 records in
+5120+0 records out
+5368709120 bytes (5.4 GB, 5.0 GiB) copied, 44.1281 s, 122 MB/s
+
+read test:
+5120+0 records in
+5120+0 records out
+5368709120 bytes (5.4 GB, 5.0 GiB) copied, 60.6654 s, 88.5 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/2 (bs=64k):
+
+write test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 25.1609 s, 128 MB/s
+
+read test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 36.236 s, 88.9 MB/s
+
+> dd benchmark 2/2 (bs=64k):
+
+write test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 25.0761 s, 128 MB/s
+
+read test:
+49152+0 records in
+49152+0 records out
+3221225472 bytes (3.2 GB, 3.0 GiB) copied, 36.1337 s, 89.1 MB/s
+
+> dd benchmark done!
+
+
+
+> dd benchmark 1/2 (bs=4k):
+
+write test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 17.4834 s, 123 MB/s
+
+read test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 24.937 s, 86.1 MB/s
+
+> dd benchmark 2/2 (bs=4k):
+
+write test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 17.5768 s, 122 MB/s
+
+read test:
+524288+0 records in
+524288+0 records out
+2147483648 bytes (2.1 GB, 2.0 GiB) copied, 24.1333 s, 89.0 MB/s
+
+> dd benchmark done!
+
+
+
+> hdparm benchmark 1/2 (/dev/mapper/cryptsdb3):
+
+
+/dev/mapper/cryptsdb3:
+ Timing cached reads:    HDIO_DRIVE_CMD(identify) failed: Inappropriate ioctl for device
+1528 MB in  2.00 seconds = 763.90 MB/sec
+ Timing buffered disk reads: 258 MB in  3.00 seconds =  85.96 MB/sec
+
+> hdparm benchmark 2/2 (/dev/mapper/cryptsdb3):
+
+
+/dev/mapper/cryptsdb3:
+ Timing cached reads:    HDIO_DRIVE_CMD(identify) failed: Inappropriate ioctl for device
+1386 MB in  2.00 seconds = 693.39 MB/sec
+ Timing buffered disk reads: 254 MB in  3.06 seconds =  83.03 MB/sec
+
+> hdparm benchmark done!
+

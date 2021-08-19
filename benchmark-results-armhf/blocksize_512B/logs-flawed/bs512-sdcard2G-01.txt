@@ -1,0 +1,100 @@
+
+> cryptsetup benchmark 1/3:
+
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha12,aes-adiantum        256b       107.4 MiB/s       112.2 MiB/s
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha20,aes-adiantum        256b        98.4 MiB/s        98.3 MiB/s
+# Tests are approximate using memory only (no storage IO).
+# Algorithm |       Key |      Encryption |      Decryption
+    aes-xts        256b        83.6 MiB/s        73.2 MiB/s
+
+
+> cryptsetup benchmark 2/3:
+
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha12,aes-adiantum        256b       112.5 MiB/s       112.4 MiB/s
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha20,aes-adiantum        256b        97.7 MiB/s        97.6 MiB/s
+# Tests are approximate using memory only (no storage IO).
+# Algorithm |       Key |      Encryption |      Decryption
+    aes-xts        256b        83.1 MiB/s        72.9 MiB/s
+
+
+> cryptsetup benchmark 3/3:
+
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha12,aes-adiantum        256b       111.9 MiB/s       112.2 MiB/s
+# Tests are approximate using memory only (no storage IO).
+#            Algorithm |       Key |      Encryption |      Decryption
+xchacha20,aes-adiantum        256b        98.3 MiB/s        98.6 MiB/s
+# Tests are approximate using memory only (no storage IO).
+# Algorithm |       Key |      Encryption |      Decryption
+    aes-xts        256b        83.2 MiB/s        73.0 MiB/s
+
+> cryptsetup benchmark done!
+
+
+
+> dd benchmark 1/2:
+
+write test:
+128+0 records in
+128+0 records out
+134217728 bytes (134 MB, 128 MiB) copied, 12.9292 s, 10.4 MB/s
+
+read test:
+128+0 records in
+128+0 records out
+134217728 bytes (134 MB, 128 MiB) copied, 6.09619 s, 22.0 MB/s
+
+
+> dd benchmark 2/2:
+
+write test:
+128+0 records in
+128+0 records out
+134217728 bytes (134 MB, 128 MiB) copied, 13.0605 s, 10.3 MB/s
+
+read test:
+128+0 records in
+128+0 records out
+134217728 bytes (134 MB, 128 MiB) copied, 6.32237 s, 21.2 MB/s
+
+> dd benchmark done!
+
+
+
+> hdparm benchmark 1/3:
+
+
+/dev/mmcblk0:
+ Timing cached reads:    HDIO_DRIVE_CMD(identify) failed: Invalid argument
+1502 MB in  2.00 seconds = 751.35 MB/sec
+ Timing buffered disk reads:  64 MB in  3.05 seconds =  21.01 MB/sec
+
+
+> hdparm benchmark 2/3:
+
+
+/dev/mmcblk0:
+ Timing cached reads:    HDIO_DRIVE_CMD(identify) failed: Invalid argument
+1508 MB in  2.00 seconds = 754.32 MB/sec
+ Timing buffered disk reads:  64 MB in  3.05 seconds =  21.01 MB/sec
+
+
+> hdparm benchmark 3/3:
+
+
+/dev/mmcblk0:
+ Timing cached reads:    HDIO_DRIVE_CMD(identify) failed: Invalid argument
+1510 MB in  2.00 seconds = 754.77 MB/sec
+ Timing buffered disk reads:  64 MB in  3.05 seconds =  21.01 MB/sec
+
+> hdparm benchmark done!
+
